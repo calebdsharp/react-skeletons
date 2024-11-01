@@ -9,7 +9,7 @@
   "scripts": {
     "build": "tsc",
     "prepublishOnly": "npm run build",
-    "test": "echo 'No tests yet"
+    "test": "echo 'No tests yet'"
   },
   "keywords": [],
   "author": "",
