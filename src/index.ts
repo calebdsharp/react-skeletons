@@ -1,2 +1,2 @@
-export { default as TextSkeleton } from "./components/TextSkeleton";
+export { Skeleton } from "./components";
 export { Animation } from "./types";
