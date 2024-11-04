@@ -4,14 +4,20 @@ import { StyledSkeletonProps } from "../types";
 import { createBackground, getAnimation, toPx } from "../utils";
 
 export const StyledSkeleton = styled.div<StyledSkeletonProps>`
-  animation: ${({ $animation, $direction, $duration }) =>
-    $animation
-      ? getAnimation({
-          animation: $animation,
-          direction: $direction,
-          duration: $duration,
-        })
-      : "none"};
+  animation: ${({ $animation, $direction, disabled, $duration }) => {
+    if (disabled) {
+      return "none";
+    }
+    if ($animation) {
+      return getAnimation({
+        animation: $animation,
+        direction: $direction,
+        duration: $duration,
+      });
+    } else {
+      return "none";
+    }
+  }};
   background: ${({ $animation, $background, color, $secondaryColor }) => {
     if ($animation) {
       if ($background) {

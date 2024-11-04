@@ -6,6 +6,7 @@ export const DefaultSkeletonValues: SkeletonProps = {
   borderRadius: "4px",
   color: "#a4a4a2",
   direction: "ltr",
+  disabled: false,
   duration: 1.5,
   height: "1em",
   margin: "8px 0",
