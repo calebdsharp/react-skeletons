@@ -15,6 +15,7 @@ export interface SkeletonProps extends BackgroundProps {
   animation?: Animation;
   background?: Background;
   borderRadius?: BorderRadius;
+  count?: number;
   direction?: Direction;
   disabled?: boolean;
   duration?: number;
@@ -32,6 +33,7 @@ export interface StyledSkeletonProps
     | "animation"
     | "background"
     | "borderRadius"
+    | "count"
     | "direction"
     | "duration"
     | "margin"
