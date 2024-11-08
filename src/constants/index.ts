@@ -9,6 +9,7 @@ export const DefaultSkeletonValues: SkeletonProps = {
   disabled: false,
   duration: 1.5,
   height: "1em",
+  id: null,
   margin: "8px 0",
   secondaryColor: "#f0f0f0",
   style: {},

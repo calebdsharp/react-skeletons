@@ -19,6 +19,7 @@ export interface SkeletonProps extends BackgroundProps {
   disabled?: boolean;
   duration?: number;
   height?: string;
+  id?: string | null;
   margin?: Margin;
   style?: CSSProperties;
   variant?: Variant;
