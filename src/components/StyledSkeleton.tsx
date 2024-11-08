@@ -1,9 +1,13 @@
-import styled from "styled-components";
+import styled, { DataAttributes } from "styled-components";
 
 import { StyledSkeletonProps } from "../types";
 import { createBackground, getAnimation, toPx } from "../utils";
 
-export const StyledSkeleton = styled.div<StyledSkeletonProps>`
+export const StyledSkeleton = styled.div.attrs<
+  StyledSkeletonProps & DataAttributes
+>((props) => ({
+  "data-testid": props.id || null,
+}))`
   animation: ${({ $animation, $direction, disabled, $duration }) => {
     if (disabled) {
       return "none";
@@ -33,6 +37,7 @@ export const StyledSkeleton = styled.div<StyledSkeletonProps>`
   }};
   border-radius: ${({ $borderRadius }) => $borderRadius && toPx($borderRadius)};
   height: ${({ height }) => height && toPx(height)};
+  id: ${({ id }) => id && id};
   margin: ${({ $margin }) => $margin && toPx($margin)};
   width: ${({ width }) => width && toPx(width)};
 `;
